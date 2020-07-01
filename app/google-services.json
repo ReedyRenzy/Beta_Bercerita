@@ -1,0 +1,164 @@
+{
+  "project_info": {
+    "project_number": "10050380704",
+    "firebase_url": "https://bercerita-58273.firebaseio.com",
+    "project_id": "bercerita-58273",
+    "storage_bucket": "bercerita-58273.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10050380704:android:a185dd6f0ae7bed635fac5",
+        "android_client_info": {
+          "package_name": "com.blogapp.aws.movieuitemplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10050380704-cuv18qokks2o1tsc26c83mofaj2jmodf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTifpItdEB0LGxB48N_pvTvlae8nlHRWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10050380704-cuv18qokks2o1tsc26c83mofaj2jmodf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10050380704:android:94b95cb598118e2f35fac5",
+        "android_client_info": {
+          "package_name": "faisyal.bahasaisyarat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10050380704-cuv18qokks2o1tsc26c83mofaj2jmodf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTifpItdEB0LGxB48N_pvTvlae8nlHRWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10050380704-cuv18qokks2o1tsc26c83mofaj2jmodf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10050380704:android:021b88e0fea45f1a35fac5",
+        "android_client_info": {
+          "package_name": "faisyal.bahasaisyarat.betabercerita"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10050380704-4vaj9nsflj83jhfi975bm10vl0ndhcvl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "faisyal.bahasaisyarat.betabercerita",
+            "certificate_hash": "103700497ba3968b21be2bfc91a0b414f2245286"
+          }
+        },
+        {
+          "client_id": "10050380704-cuv18qokks2o1tsc26c83mofaj2jmodf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTifpItdEB0LGxB48N_pvTvlae8nlHRWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10050380704-cuv18qokks2o1tsc26c83mofaj2jmodf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10050380704:android:c30f0e1d0d8dd83f35fac5",
+        "android_client_info": {
+          "package_name": "faisyal.bahasaisyarat.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10050380704-cuv18qokks2o1tsc26c83mofaj2jmodf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTifpItdEB0LGxB48N_pvTvlae8nlHRWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10050380704-cuv18qokks2o1tsc26c83mofaj2jmodf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10050380704:android:86e0321f517b7d1035fac5",
+        "android_client_info": {
+          "package_name": "faisyal.bahasaisyarat.nyobavideostreaming"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10050380704-cuv18qokks2o1tsc26c83mofaj2jmodf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTifpItdEB0LGxB48N_pvTvlae8nlHRWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10050380704-cuv18qokks2o1tsc26c83mofaj2jmodf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BetaBercerita</string>
+    <string name="desc_Dasar_Kosa_Kata">Konten pilihan dasar kosa kata ini, terdapat video video belajar bahasa isyarat kata perkata,  sehingga kamu dapat lebih menguasai sedikit demi sedikit kata perkata yang terdapat dalam bahasa isyarat, selamat menonton dan belajar ya!</string>
+    <string name="desc_Lagu">Konten pilihan Lagu ini, terdapat video bahasa isyarat yang membuat Belajar Bahasa Isyarat menjadi mengasyikkan, karena kali ini videonya berisikan tentang seperti apa sih bahasa isyaratnya mengenai lagu yang akan dibawakann</string>
+    <string-array name="ss">
+        <item>Dasar Kosa Kata</item>
+        <item>Lagu</item>
+        <item>Podcast</item>
+    </string-array>
+</resources>
