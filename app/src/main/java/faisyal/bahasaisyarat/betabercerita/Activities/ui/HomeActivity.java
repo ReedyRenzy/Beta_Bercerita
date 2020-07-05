@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import faisyal.bahasaisyarat.betabercerita.Activities.adapters.CustomViewAdapter;
 import faisyal.bahasaisyarat.betabercerita.Activities.models.Kategori;
 import faisyal.bahasaisyarat.betabercerita.Activities.adapters.KategoriAdapter;
 import faisyal.bahasaisyarat.betabercerita.Activities.models.Slide;
@@ -43,7 +44,7 @@ public class HomeActivity extends AppCompatActivity implements VideoItemClickLis
     private List<Slide> stSlides ;
     private ViewPager sliderpager;
     private TabLayout indicator;
-    private RecyclerView KategoriBI, VideoNampilHome;
+    private RecyclerView VideoNampilHome;
     private DatabaseReference VideoRef;
 
     @Override
@@ -77,82 +78,16 @@ public class HomeActivity extends AppCompatActivity implements VideoItemClickLis
             }
         });
 
-        sliderpager = findViewById(R.id.slider_pager);
-        indicator = findViewById(R.id.indicator);
-        KategoriBI = findViewById(R.id.BS_Kategori);
         VideoNampilHome = findViewById(R.id.VideoNampilHome);
 
-        // prepare a list of slides....
-
-        stSlides = new ArrayList<>();
-        stSlides.add(new Slide(R.drawable.slide1, "nanti ini akan dipasang banner"));
-        stSlides.add(new Slide(R.drawable.slide2, "nanti ini akan dipasang banner"));
-        stSlides.add(new Slide(R.drawable.slide3, "nanti ini akan dipasang banner"));
-        stSlides.add(new Slide(R.drawable.slide4, "nanti ini akan dipasang banner"));
-        SliderPagerAdapter adapter = new SliderPagerAdapter(this,stSlides);
-        sliderpager.setAdapter(adapter);
-
-        // setup timer
-
-        Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new HomeActivity.SliderTimer(), 4000, 6000);
-        indicator.setupWithViewPager(sliderpager,true);
-
-        // Recyclerview setup
-
-
-        // ini data
-
-        List<Kategori> stKategori = new ArrayList<>();
-        stKategori.add(new Kategori("Dasar Kosa Kata", R.drawable.kategori1,R.drawable.detail1));
-        stKategori.add(new Kategori("Lagu", R.drawable.kategori2,R.drawable.detail2));
-        stKategori.add(new Kategori("Podcast", R.drawable.kategori3,R.drawable.detail3));
-
-
-        KategoriAdapter kategoriAdapter = new KategoriAdapter(this,stKategori,this);
-        KategoriBI.setAdapter(kategoriAdapter);
-        KategoriBI.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
-
-    }
-
-
-    public static class VideoViewHolder extends RecyclerView.ViewHolder{
-        View mview;
-        public VideoViewHolder(@NonNull View itemView) {
-            super(itemView);
-            mview = itemView;
-        }
-        public void setVideoJudul(String videoJudul){
-           TextView judulvideo = (TextView) mview.findViewById(R.id.judul_tampil);
-           judulvideo.setText(videoJudul);
-         }
-        public void setVideoUri(String videoUri){
-            VideoView videotampill = (VideoView) mview.findViewById(R.id.video_tampil);
-            videotampill.setVideoURI(Uri.parse(videoUri));
-            videotampill.start();
-        }
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         FirebaseRecyclerOptions<tampilvideo> options = new FirebaseRecyclerOptions.Builder<tampilvideo>().setQuery(VideoRef, tampilvideo.class).build();
-
-        FirebaseRecyclerAdapter<tampilvideo, VideoViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<tampilvideo, VideoViewHolder>(options) {
-            @Override
-            protected void onBindViewHolder(@NonNull final VideoViewHolder holder, int position, @NonNull final tampilvideo model) {
-                holder.setVideoJudul(model.getVideoJudul());
-                holder.setVideoUri(model.getVideoUri());
-            }
-
-            @NonNull
-            @Override
-            public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tampilvideolayout, parent, false);
-                VideoViewHolder viewHolder = new VideoViewHolder(view);
-                return viewHolder;
-            }
-        };
+        CustomViewAdapter firebaseRecyclerAdapter = new CustomViewAdapter(options, getApplicationContext());
+        firebaseRecyclerAdapter.setVideoClickListener(this);
         VideoNampilHome.setAdapter(firebaseRecyclerAdapter);
         VideoNampilHome.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
         firebaseRecyclerAdapter.startListening();

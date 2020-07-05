@@ -7,68 +7,6 @@
     tools:context=".Activities.ui.HomeActivity"
     android:background="@color/colorPrimary">
 
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/slider_pager"
-        android:layout_width="match_parent"
-        android:layout_height="225dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp" />
-
-    <com.google.android.material.tabs.TabLayout
-        app:tabGravity="center"
-        android:id="@+id/indicator"
-        app:tabBackground="@drawable/indicator_selector"
-        app:tabIndicatorHeight="0dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/slider_pager"
-        tools:layout_editor_absoluteX="0dp"
-        android:layout_below="@+id/slider_pager">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Monday" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tuesday" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Wednesday" />
-    </com.google.android.material.tabs.TabLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Kategori Belajar Bahasa Isyarat"
-        android:textColor="#ffffff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/indicator"
-        android:layout_below="@+id/indicator"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/BS_Kategori"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/indicator" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/VideoNampilHome"
         android:layout_width="match_parent"
