@@ -48,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText userEmail,userPassword,userPassword2,username;
     private ProgressBar loadingProgress;
     private Button regBtn, backBtn;
-    private DatabaseReference rootref;
+    private DatabaseReference RootRef;
     private DatabaseReference Users;
     private DatabaseReference mDatabase;
 
@@ -70,7 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
         backBtn = findViewById(R.id.backBtn);
 
         mAuth = FirebaseAuth.getInstance();
-        rootref = FirebaseDatabase.getInstance().getReference();
+        RootRef = FirebaseDatabase.getInstance().getReference();
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +93,7 @@ public class RegisterActivity extends AppCompatActivity {
                 final String password = userPassword.getText().toString();
                 final String password2 = userPassword2.getText().toString();
                 final String name = username.getText().toString();
+
 //                String userid = mAuth.getCurrentUser().getUid();
 
 
@@ -169,15 +170,19 @@ public class RegisterActivity extends AppCompatActivity {
                             // afterwe created user account we need to update his profile picture and name
                             updateUserInfo(name, pickedImgUri, mAuth.getCurrentUser());
 
-                            String userid = mAuth.getCurrentUser().getUid();
+
+                            String currentUserID = mAuth.getCurrentUser().getUid();
+
+
+
                             HashMap<String, Object> simpan = new HashMap<>();
-                            simpan.put("userid", userid);
+                            simpan.put("userid", currentUserID);
                             simpan.put("email", email);
                             simpan.put("password", password);
                             simpan.put("username", name);
                             simpan.put("email", email);
 
-                            rootref.child(userid).setValue(simpan).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            RootRef.child("Users").child(currentUserID).setValue(simpan).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
 

@@ -11,7 +11,7 @@
         android:id="@+id/uploadVideoBtn"
         android:layout_width="155dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/JudulVideo"
+        android:layout_below="@+id/spinnerkategori"
         android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
@@ -28,23 +28,21 @@
         android:id="@+id/videouploadtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
         android:text="Upload Video"
         android:textColor="#ffffff"
         android:textSize="50px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_alignParentTop="true"
-        tools:layout_editor_absoluteY="96dp"/>
+        tools:layout_editor_absoluteY="96dp" />
 
     <VideoView
 
         android:id="@+id/upload_VideoAdmin"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
         android:layout_centerInParent="true"
         android:layout_marginBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,9 +56,9 @@
     <Spinner
         android:id="@+id/spinnerkategori"
         android:layout_width="150dp"
-        android:layout_centerInParent="true"
         android:layout_height="35dp"
-        android:layout_below="@+id/pilihvideobtn"
+        android:layout_below="@+id/JudulVideo"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="466dp"
@@ -68,31 +66,55 @@
 
     <EditText
         android:id="@+id/JudulVideo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Judul Video"
-        android:layout_marginTop="30dp"
+
         android:inputType="textPersonName"
-        android:layout_below="@+id/spinnerkategori"
+        android:layout_below="@+id/upload_VideoAdmin"
         android:background="@drawable/reg_edittext_style"
         android:layout_centerInParent="true" />
 
-    <Button
-        android:id="@+id/pilihvideobtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="pilih"
-        android:layout_below="@+id/upload_VideoAdmin"
-        android:layout_centerInParent="true"/>
+
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorAccent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/uploadVideoBtn"
+        android:visibility="invisible"
         android:layout_marginTop="10dp"
         android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/pilihvideobtn"
+        android:clickable="true"
+        android:onClick="pilihvideobtn"
+        android:layout_below="@id/JudulVideo"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content"
+        android:text="Pilih Video" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show video "
+        android:clickable="true"
+        android:onClick="ShowVideo"
+        android:layout_below="@id/progressBar"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        />
+
+
+   
+
 
 </RelativeLayout>

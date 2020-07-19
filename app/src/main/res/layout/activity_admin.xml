@@ -162,12 +162,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@color/colorNavBottom"
+            android:background="#fff"
             android:foregroundGravity="bottom"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
+            android:elevation="8dp"
+            android:layout_margin="30dp"
             app:menu="@menu/menu_navigasi" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

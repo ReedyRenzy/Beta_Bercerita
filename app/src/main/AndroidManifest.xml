@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Activities.ui.PhoneLoginActivity"></activity>
+        <activity android:name=".Activities.ui.GroupChatActivity" />
+        <activity android:name=".Activities.ui.SettingsActivity" />
+        <activity
+            android:name=".Activities.ui.Fullscreen"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:name=".Activities.ui.UploadVideoActivity" />
         <activity android:name=".Activities.ui.RealtimeChatActivity" />
         <activity android:name=".Activities.ui.AdminActivity" />

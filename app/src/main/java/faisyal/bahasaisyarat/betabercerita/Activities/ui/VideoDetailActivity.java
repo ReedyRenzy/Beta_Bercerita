@@ -60,9 +60,9 @@ public class VideoDetailActivity extends AppCompatActivity {
 
 
         // ini views
-        videoView = findViewById(R.id.videonampil);
+        /*videoView = findViewById(R.id.videonampil);
         videoView.setVideoURI(Uri.parse("https://firebasestorage.googleapis.com/v0/b/bercerita-58273.appspot.com/o/Video-Output-27396Bff-1C43-46D0-8C64-7C2ac168cd7d-1.mkv?alt=media&token=2f2de606-da3c-40e8-b78e-d27bc4e7ca6f"));
-        videoView.start();
+        videoView.start();*/
 
         iniViews();
     }

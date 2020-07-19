@@ -4,34 +4,43 @@ package faisyal.bahasaisyarat.betabercerita.Activities.ui;
 
 public class Member {
 
-    private String VideoJudul;
-    private  String VideoUri;
+    private String JudulVideo;
+    private String VideoUri;
+    private String thumbnail;
+    private String search;
 
-    private Member () {}
+    public Member () {}
 
-    public  Member (String name,String videoUri){
 
-        if (name.trim().equals("")){
-            name = "not available";
-        }
-        VideoJudul = name;
-        VideoUri = videoUri;
+    public String getThumbnail() {
+        return thumbnail;
     }
 
-
-    public String getVideoJudul() {
-        return VideoJudul;
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
     }
 
-    public void setVideoJudul(String videoJudul) {
-        VideoJudul = videoJudul;
+    public String getJudulVideo() {
+        return JudulVideo;
     }
 
-    public String getVideoUri() {
+    public void setJudulVideo(String judulVideo) {
+        JudulVideo = judulVideo;
+    }
+
+    public String getVideoUrl() {
         return VideoUri;
     }
 
-    public void setVideoUri(String videoUri) {
-        VideoUri = videoUri;
+    public void setVideoUrl(String videoUrl) {
+        VideoUri = videoUrl;
+    }
+
+    public String getSearch() {
+        return search;
+    }
+
+    public void setSearch(String search) {
+        this.search = search;
     }
 }

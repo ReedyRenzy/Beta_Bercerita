@@ -114,11 +114,21 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseUser user = mAuth.getCurrentUser();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        if (user != null) {
+        if (currentUser != null)
+        {
             // jika user sudah login ketika buka program langsung ke menu home
-            updateUI();
+            SendUserToHomeActivity();
         }
+    }
+
+
+    private void SendUserToHomeActivity()
+    {
+        Intent homeIntent = new Intent(LoginActivity.this, HomeActivity.class);
+        homeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(homeIntent);
+        finish();
     }
 }

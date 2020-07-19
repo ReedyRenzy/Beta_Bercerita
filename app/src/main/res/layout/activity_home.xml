@@ -3,21 +3,70 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightgray"
+    tools:context=".Activities.ui.HomeActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview_Videotampilhome"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/Bottom_Nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corners"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BS_Kategori"
+        android:elevation="8dp"
+        app:menu="@menu/menu_navigasi"
+        android:foregroundGravity="bottom"
+        android:layout_margin="30dp"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".Activities.ui.HomeActivity"
     android:background="@color/colorPrimary">
 
-    <androidx.recyclerview.widget.RecyclerView
+  &lt;!&ndash;  <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/VideoNampilHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/BS_Kategori"
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/indicator" />
+        app:layout_constraintTop_toBottomOf="@+id/indicator" />&ndash;&gt;
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -34,4 +83,4 @@
 
 
 
-</RelativeLayout>
+</RelativeLayout>-->
