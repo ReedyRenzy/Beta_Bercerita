@@ -13,7 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activities.ui.PhoneLoginActivity"></activity>
+        <activity android:name=".Activities.ui.HomeActivity" >
+        </activity>
+        <activity android:name=".Activities.ui.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.ui.RegisterActivity"/>
+        <activity android:name=".Activities.ui.PhoneLoginActivity" />
         <activity android:name=".Activities.ui.GroupChatActivity" />
         <activity android:name=".Activities.ui.SettingsActivity" />
         <activity
@@ -26,18 +36,12 @@
             android:name=".Activities.ui.VideoPlayerActivity"
             android:screenOrientation="landscape" />
         <activity android:name=".Activities.ui.VideoDetailActivity" />
-        <activity android:name=".Activities.ui.HomeActivity" />
-        <activity android:name=".Activities.ui.RegisterActivity" />
+
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-        <activity android:name=".Activities.ui.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
     </application>
 
 </manifest>

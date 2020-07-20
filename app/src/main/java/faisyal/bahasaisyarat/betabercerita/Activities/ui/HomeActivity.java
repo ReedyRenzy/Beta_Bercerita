@@ -250,6 +250,14 @@ public class HomeActivity extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+
+    private void SendUserToLoginActivity() {
+
+        Intent LoginIntent = new Intent(HomeActivity.this, LoginActivity.class);
+        LoginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(LoginIntent);
+        finish();
+    }
 }
 
 

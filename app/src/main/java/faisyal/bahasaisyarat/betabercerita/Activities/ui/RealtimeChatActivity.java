@@ -177,7 +177,7 @@ public class RealtimeChatActivity extends AppCompatActivity {
             }
         });
 
-        builder.setNegativeButton("cANCEL", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i)
             {
